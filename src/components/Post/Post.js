@@ -14,7 +14,8 @@ import styles from "./PostStyles";
 
 const Post = () => {
 
-     const [paused, setPaused] =  useState(false);
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
 
 
     const onPlayPausePress = () => {
@@ -24,14 +25,15 @@ const Post = () => {
  
     return (
       <View style={styles.container}>
-        <TouchableWithoutFeedback onPress={onPlayPausePress}>
+        <TouchableWithoutFeedback onPress={() => status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()}> 
             <Video
+                ref={video}
                 style={styles.video}
                 source={ require("../../assets/videos/test.mp4") }
                 shouldPlay={true}
                 resizeMode="contain"
                 isLooping={true}
-                paused={paused}
+                onPlaybackStatusUpdate={status => setStatus(() => status)}
             />
         </TouchableWithoutFeedback> 
 
