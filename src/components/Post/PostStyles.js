@@ -1,6 +1,10 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
+    container: {
+        width: "100%",
+        height: Dimensions.get('window').height - 75
+    },
     video: {
         position: "absolute",
         top: 0,
@@ -8,9 +12,32 @@ const styles = StyleSheet.create({
         bottom: 0,
         right: 0,
     },
-    container: {
-        width: "100%",
-        height: Dimensions.get('window').height
+    uiContainer: {
+        height: "100%",
+        justifyContent: "flex-end",
+    },
+    rightSide: {
+        alignSelf: "flex-end"
+    },
+    bottomSide: {
+
+    },
+    rapperName: {
+        color: "#FFF",
+        fontSize: 36,
+        fontWeight: "bold",
+    },
+    hometown: {
+
+    },
+    priceRow: {
+
+    },
+    currentPrice: {
+        
+    },
+    priceChange: {
+
     }
 });
 

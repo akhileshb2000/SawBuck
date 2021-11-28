@@ -6,11 +6,10 @@ import {
     TouchableWithoutFeedback
  } from "react-native";
 
-import { Video, AVPlaybackStatus } from 'expo-av';
-//import Video from "expo"
-
-// import Video from "react-native-video";
+import { Video } from 'expo-av';
 import styles from "./PostStyles";
+
+import { AntDesign } from '@expo/vector-icons';
 
 const Post = () => {
 
@@ -35,8 +34,29 @@ const Post = () => {
                 isLooping={true}
                 onPlaybackStatusUpdate={status => setStatus(() => status)}
             />
-        </TouchableWithoutFeedback> 
+        </TouchableWithoutFeedback>
+        <View style={styles.uiContainer}>
+            <View style={styles.rightSide}>
+                <Text style={{fontSize: 14, color: 'black'}}>
+                    Go to profile!
+                </Text>
+            </View>
+            <View style={styles.bottomSide}>
+                <Text style={styles.rapperName}>
+                    @Roheezy
+                </Text>
+                <Text style={styles.hometown}>
+                    Leesburg, VA.
+                </Text>
+                <View style={styles.priceRow}>
+                    {/* Need to do the Current Price + The Price Change*/}
+                    <Text style={styles.currentPrice}>$RICH = $124.67</Text>
+                    <AntDesign name="caretup" size={24} color= "#00FFA3" />
+                    <Text style={styles.priceChange}>52% last month</Text>
+                </View>
+            </View>
 
+        </View>
       </View>
     );
 }
