@@ -20,18 +20,21 @@ const styles = StyleSheet.create({
         alignSelf: "flex-end"
     },
     bottomSide: {
-
+        padding: 10,
     },
     rapperName: {
         color: "#FFF",
         fontSize: 36,
-        fontWeight: "bold",
+        fontWeight: "600",
+        marginBottom: 5,
     },
     hometown: {
-
+        color: "#FFF",
+        fontSize: 18,
+        marginBottom: 5,
     },
     priceRow: {
-
+        flexDirection: "row",
     },
     currentPrice: {
         

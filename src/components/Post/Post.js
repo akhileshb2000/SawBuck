@@ -37,9 +37,7 @@ const Post = () => {
         </TouchableWithoutFeedback>
         <View style={styles.uiContainer}>
             <View style={styles.rightSide}>
-                <Text style={{fontSize: 14, color: 'black'}}>
-                    Go to profile!
-                </Text>
+                <AntDesign name="right" size={24} color="#FFF" />
             </View>
             <View style={styles.bottomSide}>
                 <Text style={styles.rapperName}>
