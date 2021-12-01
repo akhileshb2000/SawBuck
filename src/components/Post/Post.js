@@ -23,19 +23,19 @@ const Post = () => {
     }
  
     return (
-      <View style={styles.container}>
+         <View style={styles.container}>
         <TouchableWithoutFeedback onPress={() => status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()}> 
             <Video
                 ref={video}
                 style={styles.video}
-                source={ require("../../assets/videos/test.mp4") }
+                source={ require("../../../assets/apartmentVid.mp4") }
                 shouldPlay={true}
                 resizeMode="contain"
                 isLooping={true}
                 onPlaybackStatusUpdate={status => setStatus(() => status)}
             />
         </TouchableWithoutFeedback>
-        <View style={styles.uiContainer}>
+        {/* <View style={styles.uiContainer}>
             <View style={styles.rightSide}>
                 <AntDesign name="right" size={24} color="#FFF" />
             </View>
@@ -47,15 +47,16 @@ const Post = () => {
                     Leesburg, VA.
                 </Text>
                 <View style={styles.priceRow}>
-                    {/* Need to do the Current Price + The Price Change*/}
+                    Need to do the Current Price + The Price Change
                     <Text style={styles.currentPrice}>$RICH = $124.67</Text>
                     <AntDesign name="caretup" size={24} color= "#00FFA3" />
                     <Text style={styles.priceChange}>52% last month</Text>
                 </View>
             </View>
 
-        </View>
+        </View> */}
       </View>
+     
     );
 }
 

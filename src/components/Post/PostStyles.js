@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from "react-native";
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        height: Dimensions.get('window').height - 75
+        height: "100%",//Dimensions.get('window').height - 75
     },
     video: {
         position: "absolute",
