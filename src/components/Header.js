@@ -7,11 +7,10 @@ import { Ionicons } from '@expo/vector-icons';
 const Container = styled.View`
     top: 25px;
     width: 100%
-    justify-content: center;
     align-items: center;
     flex-direction: row;
     position: absolute;
-    margin: 15px 12px;
+    margin: 20px 20px;
     z-index: 1;
 `
 const SongName = styled.Text`
@@ -26,7 +25,7 @@ const Header = ({index}) => {
     return (
         <Container>
             <Ionicons name="md-barcode-outline" size={24} color="white" />
-            <SongName>{api[index].song}</SongName>
+            <SongName>{" " + api[index].song}</SongName>
         </Container>
     )
 }

@@ -32,14 +32,14 @@ const Center = styled.View`
     flex-direction: row;
 `
 
-const Main = ({videos}) => {
+const Main = ({videos, navigation}) => {
     return (
         <Container orientation='vertical'>
             {videos.map((item, index) => {
                 return (
                     <View key={index}>  
                         <Header index={index}/>
-                        <VideoPlayer video={index}/>
+                        <VideoPlayer index={index}/>
                         <Gradient
                             Locations={[0, 0.26, 0.6, 1]}
                             colors={[
@@ -49,7 +49,7 @@ const Main = ({videos}) => {
                                 'rgba(0, 0, 0, 1)'
                             ]}>
                             <Center>
-                                <Info index={index}></Info>
+                                <Info index={index} navigation={navigation}></Info>
                             </Center>
                         </Gradient>
                     </View>

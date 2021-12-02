@@ -13,7 +13,7 @@ const Container = styled.View`
     background: white;
 `
 
-const Discover = () => {
+const Discover = ({ navigation }) => {
     return (
         <>
             <StatusBar 
@@ -22,9 +22,8 @@ const Discover = () => {
                 barStyle='light-content'
             />
             <Container>
-                {/* <Header /> */}
-                <Main videos={api}/>
-                <Tabs />
+                <Main navigation={navigation} videos={api}/>
+                <Tabs navigation={navigation}/>
             </Container>
         </>
     )

@@ -1,6 +1,16 @@
 import React from 'react'
 
 import styled from 'styled-components/native'
+import {
+    TouchableOpacity,
+ } from 'react-native';
+import { 
+    Entypo,
+    Feather,
+    FontAwesome5,
+    Ionicons,
+ } from '@expo/vector-icons';
+
 
 const Container = styled.View`
     height: 65px;
@@ -29,27 +39,32 @@ const MenuText = styled.Text`
     color: ${props => (props.active ? '#fff' : 'rgba(255, 255, 255, 0.6)')}
 `
 
-const Tabs = () => {
+const Tabs = ({ navigation }) => {
+
     return (
         <Container>
             <Menu>
-                <Icon source={require('../../assets/favicon.png')} />
-                <MenuText active='true'>Button</MenuText>
+                <TouchableOpacity onPress={() => navigation.push("SawBuck")}>
+                    <Entypo name="globe" size={30} color="white" />
+                </TouchableOpacity>
             </Menu>
 
             <Menu>
-                <Icon source={require('../../assets/favicon.png')} />
-                <MenuText active='true'>Button</MenuText>
+                <TouchableOpacity onPress={() => navigation.push("SawBuck")}>
+                    <Feather name="search" size={30} color="white" />
+                </TouchableOpacity>
             </Menu>
 
             <Menu>
-                <Icon source={require('../../assets/favicon.png')} />
-                <MenuText active='true'>Button</MenuText>
+                <TouchableOpacity onPress={() => navigation.push("SawBuck")}>
+                    <FontAwesome5 name="wallet" size={30} color="white" />
+                </TouchableOpacity>
             </Menu>
 
             <Menu>
-                <Icon source={require('../../assets/favicon.png')} />
-                <MenuText active='true'>Button</MenuText>
+                <TouchableOpacity onPress={() => navigation.push("SawBuck")}>
+                    <Ionicons name="person-outline" size={30} color="white" />
+                </TouchableOpacity>
             </Menu>
         </Container>
     )

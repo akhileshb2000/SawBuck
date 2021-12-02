@@ -1,5 +1,4 @@
 node_modules/
-assets/
 .expo/
 dist/
 npm-debug.*
@@ -10,6 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+*.mp4
 
 # macOS
 .DS_Store

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TouchableWithoutFeedback } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native'
 import api from '../services/api'
 import { AntDesign } from '@expo/vector-icons';
@@ -59,23 +59,26 @@ const Price = styled.Text`
     font-weight: bold;
     paddingLeft: 10px;
     paddingRight: 10px;
+    justify-content: center;
  ` 
 
-const Info = ({index}) => {
+const Info = ({index, navigation}) => {
     return (
         <Container>
-            <User>
-                <UserName>{api[index].name}</UserName>
-                <AntDesign name="right" size={40} color="#FFF" />
-            </User>
-            <HomeTown>{api[index].hometown}</HomeTown>
-            <PriceContainer>
-                <Price>{api[index].price}</Price>
-                <PriceChange>
-                    <AntDesign name="caretup" size={24} color= "#00FFA3" />
-                    {api[index].priceChange}
-                </PriceChange>
-            </PriceContainer>
+            <TouchableOpacity onPress={() => navigation.push("Invest")}>
+                <User>
+                    <UserName>{api[index].name}</UserName>
+                    <AntDesign name="right" size={40} color="#FFF" />
+                </User>
+                <HomeTown>{api[index].hometown}</HomeTown>
+                <PriceContainer>
+                    <Price>{api[index].price}</Price>
+                    <PriceChange>
+                        <AntDesign name="caretup" size={24} color= "#00FFA3" />
+                        {api[index].priceChange}
+                    </PriceChange>
+                </PriceContainer>
+            </TouchableOpacity>
         </Container>
     )
 }
