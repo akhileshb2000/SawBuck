@@ -21,7 +21,7 @@ const VideoPlayer = ({index}) => {
                 shouldPlay={true}
                 isLooping={true}
             /> */}
-            <Post></Post>
+            <Post index={index}></Post>
         </View>
         
     )

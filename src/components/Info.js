@@ -65,14 +65,14 @@ const Price = styled.Text`
 const Info = ({index, navigation}) => {
     return (
         <Container>
-            <TouchableOpacity onPress={() => navigation.push("Invest")}>
+            <TouchableOpacity onPress={() => navigation.push("Profile", {index: index})}>
                 <User>
                     <UserName>{api[index].name}</UserName>
                     <AntDesign name="right" size={40} color="#FFF" />
                 </User>
                 <HomeTown>{api[index].hometown}</HomeTown>
                 <PriceContainer>
-                    <Price>{api[index].price}</Price>
+                    <Price>{api[index].coinName + " = " + api[index].price}</Price>
                     <PriceChange>
                         <AntDesign name="caretup" size={24} color= "#00FFA3" />
                         {api[index].priceChange}

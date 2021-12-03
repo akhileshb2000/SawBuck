@@ -26,7 +26,7 @@ const Post = ({index}) => {
             <Video
                 ref={video}
                 style={styles.video}
-                source={ require('../../../assets/apartmentVid.mp4') }
+                source={ api[index].poster }
                 shouldPlay={true}
                 resizeMode={"cover"}
                 isLooping={true}
